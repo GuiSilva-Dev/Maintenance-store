@@ -688,4 +688,35 @@
     .footer-column {
         font-size: .7rem;
     }
+
+    /* Ajustes de tamanho dos botões flutuantes */
+    .fixed-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .fixed-button i {
+        font-size: 18px;
+    }
+
+    #backToTop {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .fab {
+        width: 45px;
+        height: 45px;
+    }
+
+    .fab i {
+        font-size: 20px;
+    }
+
+    .social-buttons a i {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
 }

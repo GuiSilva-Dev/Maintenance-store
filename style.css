@@ -130,6 +130,13 @@ section .txt-topo {
 
 }
 
+.topo h1 {
+    background: linear-gradient(to top, #ff9100, #351b01);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 .txt-topo h1 {
     font-size: 3rem;
     padding: 80px 0 0 0;
@@ -889,7 +896,7 @@ animation: flutuar 1.5s ease-in-out infinite alternate;
 
 .text-headline-skills h2 {
     font-family: var(--font-grande);
-    font-size: clamp(2rem, 2.5vw, 1.75rem);
+    font-size: clamp(2.5rem, 2.5vw, 1.75rem);
 }
 
 .text-headline-skills h2 span {
@@ -1009,6 +1016,7 @@ input[type="radio"] {
     width: 80%;
     height: auto;
     margin-bottom: 100px;
+    border-radius: 30px;
 }
 
 /* Estilos dos botões de navegação */
@@ -1232,7 +1240,7 @@ button.next {
 .formulario-contato p {
     font-size: 1rem;
     color: var(--color-gray1);
-    font-weight: 500;
+    font-weight: 550;
     line-height: 1.4;
 }
 
@@ -1276,6 +1284,7 @@ button.next {
     border: 2px solid rgba(128, 128, 128, 0.5);
     outline: none;
     border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
 .logo-contato {
