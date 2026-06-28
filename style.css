@@ -756,8 +756,7 @@ section .txt-topo {
     margin: 0 auto;
     border: 1px solid hsl(0, 0%, 0%);
     color: #000000;
-    width: 100%;
-    max-width: 95%;
+    width: min(95%, 980px);
     min-height: 180px;
     border-radius: 150px;
     display: flex;
@@ -768,7 +767,6 @@ section .txt-topo {
     transform: translateX(0);
     transition: transform 0.7s ease, opacity 0.7s ease;
     opacity: 1;
-    box-sizing: border-box;
 }
 
 .card-servicos-left {
