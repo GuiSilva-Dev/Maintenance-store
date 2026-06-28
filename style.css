@@ -93,16 +93,11 @@ form .btn-enviar input:hover {
 body {
     background-image: url(img/Imagem\ do\ WhatsApp\ de\ 2025-05-01\ à\(s\)\ 02.30.20_36a232ed.jpg);
     background-size: cover;
-    /* A imagem cobrirá toda a área da tela */
     background-position: center center;
-    /* A imagem será centralizada */
     background-attachment: fixed;
-    /* ou apenas remova essa linha */
-
     background-repeat: no-repeat;
-    /* A imagem não se repetirá */
     color: #ffffff;
-
+    overflow-x: hidden;
 }
 
 .nav-mobile {
@@ -685,7 +680,7 @@ section .txt-topo {
 /*************** SERVIÇOS *****/
 .servicos {
     background-color: var(--color-black);
-    width: 99, 9%;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -694,14 +689,10 @@ section .txt-topo {
     background-image: url(img/Imagem\ do\ WhatsApp\ 2\ de\ 2025-05-01\ à\(s\)\ 02.30.21_69ac5a06.jpg);
     color: #000000;
     background-size: cover;
-    /* A imagem cobrirá toda a área da tela */
     background-position: center center;
-    /* A imagem será centralizada */
     background-attachment: fixed;
-    /* A imagem ficará fixa durante a rolagem */
     background-repeat: no-repeat;
-    /* A imagem não se repetirá */
-
+    overflow-x: hidden;
 }
 
 .container-servicos {
@@ -751,37 +742,22 @@ section .txt-topo {
 
 .servicos-cards {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 2rem 0rem;
-    margin-bottom: 4rem;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-    animation: appearRight 10ms ease-in-out;
-    animation-timeline: view();
+    gap: 2rem;
+    padding: 2rem 0 0;
+    margin-bottom: 4rem;
 }
 
-@keyframes appearRight {
-    from {
-        opacity: 0;
-        translate: -30vh 0;
-    }
-
-    to {
-        opacity: 10;
-        translate: 0 0;
-    }
-}
-
-.card-servicos-left {
-    margin-left: 5%;
+.card-servicos-left,
+.card-servicos {
+    margin: 0 auto;
     border: 1px solid hsl(0, 0%, 0%);
-    color: #ff9100;
-    width: 95%;
+    color: #000000;
+    width: 100%;
+    max-width: 95%;
     min-height: 180px;
     border-radius: 150px;
     display: flex;
@@ -789,20 +765,18 @@ section .txt-topo {
     justify-content: space-between;
     padding: 2rem;
     gap: 7%;
-    animation: appearLeft 10ms alternate-reverse;
-    animation-timeline: view();
+    transform: translateX(0);
+    transition: transform 0.7s ease, opacity 0.7s ease;
+    opacity: 1;
+    box-sizing: border-box;
 }
 
-@keyframes appearLeft {
-    from {
-        opacity: 0;
-        translate: -20vh 0;
-    }
+.card-servicos-left {
+    border-left: 4px solid #ff9100;
+}
 
-    to {
-        opacity: 1;
-        translate: 0 0;
-    }
+.card-servicos {
+    border-right: 4px solid #ff9100;
 }
 
 .card-titulo {
@@ -810,8 +784,6 @@ section .txt-topo {
     font-size: clamp(1.5vw + .4rem, 1.25rem);
     font-family: var(--font-pequena);
     font-weight: normal;
-
-
 }
 
 .card-icon img {
@@ -915,7 +887,7 @@ animation: flutuar 1.5s ease-in-out infinite alternate;
 
 .slider {
     margin-bottom: 1.5rem;
-    
+
 }
 
 .box-skill {
