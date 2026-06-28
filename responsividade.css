@@ -526,34 +526,49 @@
 
     /*img skills*/
     .slide-skills img {
-        padding: 0 0 0 0;
+        width: 80%;
+        max-width: 600px;
+        padding: 0;
+        margin: 0 auto;
+        display: block;
+    }
+
+    @media (max-width: 600px) {
+        .slide-skills img {
+            width: 90%;
+            max-width: none;
+        }
     }
 
     /* Estilos dos botões de navegação */
-    button.prev,
-    button.next {
-        /* Posiciona os botões por cima das imagens */
+    .slider button.prev,
+    .slider button.next {
         position: absolute;
-        top: 35%;
+        top: 50%;
         transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        /* Fundo semi-transparente */
-        color: white;
-        border: none;
-        padding: 10px;
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        border-radius: 5px;
+        padding: 10px 12px;
         cursor: pointer;
-        font-size: 20px;
+        font-size: 18px;
         z-index: 1;
-        /* Fica acima das imagens */
+        transition: 0.25s ease;
     }
 
-    button.prev {
-        left: 5px;
+    .slider button.prev {
+        left: 10px;
+    }
+
+    .slider button.prev:hover,
+    .slider button.next:hover {
+        background-color: #ff9100;
+        transform: translateY(-50%) scale(1.05);
     }
 
     /* Botão da esquerda */
-    button.next {
-        right: 16px;
+    .slider button.next {
+        right: 10px;
     }
 
     /* Botão da direita */
@@ -705,8 +720,8 @@
     }
 
     .fab {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     }
 
     .fab i {
@@ -718,5 +733,17 @@
         height: 42px;
         font-size: 18px;
         margin-bottom: 18px;
+    }
+
+    /* Estilos para sliders responsivos */
+    .slides-skills {
+        cursor: grab;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .slides-skills:active {
+        cursor: grabbing;
     }
 }
